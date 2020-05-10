@@ -24,16 +24,21 @@ function graph_exporter(){
             edge = node.get_protocols("incoming")[j]
 
             for( k in edge.src_dst_ports_tuples){
-                var tuple = edge.src_dst_ports_tuples[k]
-                list.push({
-                    src: node.name, 
-                    dst: edge.target, 
-                    remote_abstraction: verify_abstraction(dn_in_edges, edge), 
-                    network: edge.network, 
-                    transport: edge.transport, 
-                    t_src: tuple[0], 
-                    t_dst: tuple[1]
-                })
+
+                if(edge.target != "Internet"){
+
+                    var tuple = edge.src_dst_ports_tuples[k]
+                    list.push({
+                        incoming: false,
+                        src: node.name, 
+                        dst: edge.target, 
+                        remote_abstraction: verify_abstraction(dn_in_edges, edge), 
+                        network: edge.network[0], 
+                        transport: edge.transport[0], 
+                        t_src: tuple[0], 
+                        t_dst: tuple[1]
+                    })
+                }
             }
         }
 
@@ -41,20 +46,24 @@ function graph_exporter(){
             edge = node.get_protocols("outgoing")[j]
 
             for( k in edge.src_dst_ports_tuples){
-                var tuple = edge.src_dst_ports_tuples[k]
-                list.push({
-                    src: edge.target,
-                    dst: node.name,
-                    remote_abstraction: verify_abstraction(dn_in_edges, edge),
-                    network: edge.network,
-                    transport: edge.transport,
-                    t_src: tuple[1],
-                    t_dst: tuple[0]
-                })
+
+                if(edge.target != "Internet"){
+
+                    var tuple = edge.src_dst_ports_tuples[k]
+                    list.push({
+                        incoming: true,
+                        src: edge.target,
+                        dst: node.name,
+                        remote_abstraction: verify_abstraction(dn_out_edges, edge),
+                        network: edge.network[0],
+                        transport: edge.transport[0],
+                        t_src: tuple[1],
+                        t_dst: tuple[0]
+                    })
+                }
             }
         }
     }
-    console.log(JSON.stringify(list))
 
     file_saver(JSON.stringify(list), "mud_graph.json", "text/plain", "exp_graph")
 }
