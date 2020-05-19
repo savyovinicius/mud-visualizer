@@ -174,7 +174,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "destination-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:dst-dnsname" : "dns.google"
             },
             "udp" : {
               "destination-port" : {
@@ -252,7 +252,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "source-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:src-dnsname" : "dns.google"
             },
             "udp" : {
               "source-port" : {

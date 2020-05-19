@@ -145,7 +145,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "destination-ipv4-network" : "208.67.222.222/32"
+              "ietf-acldns:dst-dnsname" : "b.resolvers.Level3.net"
             },
             "icmp" : {
               "type" : 8,
@@ -160,7 +160,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "destination-ipv4-network" : "129.132.2.21/32"
+              "ietf-acldns:dst-dnsname" : "ee-time.ee.ethz.ch"
             },
             "udp" : {
               "destination-port" : {
@@ -194,7 +194,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "destination-ipv4-network" : "4.2.2.2/32"
+              "ietf-acldns:dst-dnsname" : "b.resolvers.Level3.net"
             },
             "icmp" : {
               "type" : 8,
@@ -247,7 +247,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "destination-ipv4-network" : "130.149.17.8/32"
+              "ietf-acldns:dst-dnsname" : "ntps1-1.eecsit.tu-berlin.de"
             },
             "udp" : {
               "destination-port" : {
@@ -296,7 +296,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "destination-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:dst-dnsname" : "dns.google"
             },
             "icmp" : {
               "type" : 8,
@@ -392,7 +392,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "source-ipv4-network" : "130.149.17.8/32"
+              "ietf-acldns:src-dnsname" : "ntps1-1.eecsit.tu-berlin.de"
             },
             "udp" : {
               "source-port" : {
@@ -409,7 +409,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "source-ipv4-network" : "129.132.2.21/32"
+              "ietf-acldns:src-dnsname" : "ee-time.ee.ethz.ch"
             },
             "udp" : {
               "source-port" : {
@@ -426,7 +426,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "source-ipv4-network" : "4.2.2.2/32"
+              "ietf-acldns:src-dnsname" : "b.resolvers.Level3.net"
             },
             "icmp" : {
               "type" : 0,
@@ -494,7 +494,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "source-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:src-dnsname" : "dns.google"
             },
             "icmp" : {
               "type" : 0,
@@ -509,7 +509,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "source-ipv4-network" : "208.67.222.222/32"
+              "ietf-acldns:src-dnsname" : "b.resolvers.Level3.net"
             },
             "icmp" : {
               "type" : 0,

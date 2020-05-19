@@ -269,7 +269,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "destination-ipv4-network" : "208.67.220.220/32"
+              "ietf-acldns:dst-dnsname" : "resolver2.opendns.com"
             },
             "udp" : {
               "destination-port" : {
@@ -733,7 +733,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "source-ipv4-network" : "208.67.220.220/32"
+              "ietf-acldns:src-dnsname" : "resolver2.opendns.com"
             },
             "udp" : {
               "source-port" : {

@@ -170,7 +170,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "destination-ipv4-network" : "8.8.4.4/32"
+              "ietf-acldns:dst-dnsname" : "dns.google"
             },
             "icmp" : {
               "type" : 8,
@@ -254,7 +254,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "destination-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:dst-dnsname" : "dns.google"
             },
             "udp" : {
               "destination-port" : {
@@ -506,7 +506,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "destination-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:dst-dnsname" : "dns.google"
             },
             "icmp" : {
               "type" : 8,
@@ -697,7 +697,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "source-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:src-dnsname" : "dns.google"
             },
             "udp" : {
               "source-port" : {
@@ -903,7 +903,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "source-ipv4-network" : "8.8.8.8/32"
+              "ietf-acldns:src-dnsname" : "dns.google"
             },
             "icmp" : {
               "type" : 0,
@@ -918,7 +918,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 1,
-              "source-ipv4-network" : "8.8.4.4/32"
+              "ietf-acldns:src-dnsname" : "dns.google"
             },
             "icmp" : {
               "type" : 0,
@@ -1007,7 +1007,7 @@
           "matches" : {
             "ipv6" : {
               "protocol" : 58,
-              "destination-ipv6-network" : "192.168.1.1"
+              "destination-ipv4-network" : "192.168.1.1"
             }
           },
           "actions" : {

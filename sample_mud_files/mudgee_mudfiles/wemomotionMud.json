@@ -111,7 +111,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "destination-ipv4-network" : "129.132.2.21/32"
+              "ietf-acldns:dst-dnsname" : "ee-time.ee.ethz.ch"
             },
             "udp" : {
               "destination-port" : {
@@ -302,7 +302,7 @@
           "matches" : {
             "ipv4" : {
               "protocol" : 17,
-              "source-ipv4-network" : "129.132.2.21/32"
+              "ietf-acldns:src-dnsname" : "ee-time.ee.ethz.ch"
             },
             "udp" : {
               "source-port" : {
