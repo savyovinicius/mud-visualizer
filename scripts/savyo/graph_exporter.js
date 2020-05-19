@@ -6,8 +6,8 @@ function is_in_list(lst, item){
     return false
 }
 
-function verify_abstraction(lst, item){
-    if (is_in_list(lst, item)) return "internet"
+function verify_abstraction(item){
+    if (allNodesObj.all_nodes[item].group > 2) return "internet"
     else return "local"
 }
 
@@ -15,10 +15,6 @@ function graph_exporter(){
     var list = []
     for (i in network.get_nodes_links_json().nodes) {
         node = allNodesObj.getNode(network.get_nodes_links_json().nodes[i].name)
-
-        dn_in_edges = allNodesObj.all_nodes[network.get_nodes_links_json().nodes[i].name].get_protocols_by_abstraction("incoming","domain-names")
-        dn_out_edges = allNodesObj.all_nodes[network.get_nodes_links_json().nodes[i].name].get_protocols_by_abstraction("outgoing","domain-names")
-
 
         for (j in node.get_protocols("incoming")){
             edge = node.get_protocols("incoming")[j]
@@ -32,7 +28,7 @@ function graph_exporter(){
                         incoming: false,
                         src: node.name, 
                         dst: edge.target, 
-                        remote_abstraction: verify_abstraction(dn_in_edges, edge), 
+                        remote_abstraction: verify_abstraction(edge.target), 
                         network: edge.network[0], 
                         transport: edge.transport[0], 
                         t_src: tuple[0], 
@@ -54,7 +50,7 @@ function graph_exporter(){
                         incoming: true,
                         src: edge.target,
                         dst: node.name,
-                        remote_abstraction: verify_abstraction(dn_out_edges, edge),
+                        remote_abstraction: verify_abstraction(edge.target),
                         network: edge.network[0],
                         transport: edge.transport[0],
                         t_src: tuple[1],
