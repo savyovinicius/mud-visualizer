@@ -31,8 +31,8 @@ function graph_exporter(){
                         remote_abstraction: verify_abstraction(edge.target), 
                         network: edge.network[0], 
                         transport: edge.transport[0], 
-                        t_src: tuple[0], 
-                        t_dst: tuple[1]
+                        t_src: tuple[1], 
+                        t_dst: tuple[0]
                     })
                 }
             }
